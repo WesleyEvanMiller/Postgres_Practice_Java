@@ -4,8 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
-public class postPrac {
-	public postPrac(){
+public class postPracInsert {
+	public postPracInsert(){
 		//Declare Connection c
 		Connection myC = null;
 		
@@ -25,7 +25,7 @@ public class postPrac {
 			//Create Statement
 			myS = myC.createStatement();
 			
-			String sql = "INSERT INTO TESTT (ID,FNAME,LNAME) VALUES (1,'Wes','Miller')";
+			String sql = "";
 			
 			myS.executeUpdate(sql);
 			
@@ -41,6 +41,6 @@ public class postPrac {
 		}		
 	}
 	public static void main (String[] args) {
-		postPrac postgres = new postPrac();
+		postPracInsert postgres = new postPracInsert();
 	}
 }
